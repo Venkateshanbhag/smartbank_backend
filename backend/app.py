@@ -9,6 +9,8 @@ from email.message import EmailMessage
 app = Flask(__name__)
 CORS(app)
 
+CORS(app, origins=["https://smartbanksys.netlify.app"])
+
 # Connect to database
 conn = sqlite3.connect('bank.db', check_same_thread=False)
 cursor = conn.cursor()
